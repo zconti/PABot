@@ -54,12 +54,12 @@ def retrieveWeather():
 
     soupW = BeautifulSoup(contentW, 'lxml')
     
-    highSegment = soupW.find('div', class_ = "CurrentConditions--tempHiLoValue--3T1DG")
+    highSegment = soupW.find('div', class_ = "CurrentConditions--tempHiLoValue--Og9IG")
 
-    current = soupW.find('span', class_ = "CurrentConditions--tempValue--MHmYY").get_text()
-    low = soupW.find('span', class_ = "Column--tempLoValue--18GuJ").get_text()
+    current = soupW.find('span', class_ = "CurrentConditions--tempValue--zUBSz").get_text()
+    low = soupW.find('span', class_ = "Column--tempLoValue--gyah9").get_text()
     high = highSegment.find('span').get_text()
-    conditions = soupW.find('div', class_ = "CurrentConditions--phraseValue--mZC_p").get_text()
+    conditions = soupW.find('div', class_ = "CurrentConditions--phraseValue---VS-k").get_text()
     
     print(f"⛅ Currently: {current}")
     print(f"🌧️ Conditions: {conditions}")
